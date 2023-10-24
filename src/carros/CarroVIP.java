@@ -8,7 +8,14 @@ public class CarroVIP extends Carro {
     
     public static double diaria = 350.00;
 
-    // Reatorar o método devolver????
+    @Override 
+    public double devolver(){
 
+        double valorDevolucao = super.devolver();
+        
+        if (valorDevolucao != 0.0) {
+            return super.getNumDias()*diaria;
+        }
+        return 0;
+    }
 }
-
